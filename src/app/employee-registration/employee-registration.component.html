@@ -1,0 +1,88 @@
+
+<div class=""> 
+    <h1 style="text-align: center; font-size: xx-large;">Employee Registration Form</h1>
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)"  > 
+      <table style="width: 100%;">
+        <tr>
+      <td> 
+        <label class="left_right_margin"><b>Employee Name:</b></label></td><td>
+       <input style="width: 30%; height: 20px" type="text"  name="employeeName" placeholder="Enter Employee Name" formControlName = "employeeName"> 
+      </td>
+      </tr>
+  
+      <tr>
+        <td><label class="left_right_margin"><b>Gender :</b></label></td><td>
+          <label > <input  type="radio" style="width: 20px; cursor: pointer;" name="gender" value="male"  formControlName = "gender"> Male
+          <input  type="radio" style="width: 20px; cursor: pointer;" name="gender" value="female" formControlName = "gender" > Female</label>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+        <label class="left_right_margin"><b>Email Id :</b></label></td><td>
+        <input style="width: 30%; height: 20px;" type="text"  name="email" formControlName = "email" placeholder="Enter your Email Id"> 
+      </td>
+      </tr>
+  
+     
+      <tr>
+        <td><label class="left_right_margin"><b>Salary :</b></label></td><td>
+       <input type="text" placeholder="Enter current Salary" style="width:30% ;height: 20px; " formControlName = "salary"></td>
+      </tr>
+  
+      <tr class="yoj">
+        <td ><label class="left_right_margin"><b>Year of Joining :</b></label></td><td>
+          <input type="date"   style="width:30% ;height: 30px; " formControlName = "yoj"></td><br>
+      </tr>
+      
+      <tr>
+         <td><label class="left_right_margin"><b> Experience :</b></label></td><td>
+         <input type="number" min="0" max="50"  placeholder="Experience" style="width:30% ;height: 30px; " formControlName = "experience"></td><br>
+      </tr>
+  
+      <tr>
+        <td> <label class="left_right_margin"><b>Job Role :</b></label></td><td>
+          
+            <select style="width:30% ;height: 30px; "formControlName="jobRole">
+            <option>Analyst</option>
+            <option>Sr.Analyst</option>
+            <option>Team Leader</option>
+            <option>Manager</option>      
+            </select>
+          </td> <br>
+        </tr>
+  
+      <tr>
+    
+        <td><label class="left_right_margin" style="width: 40px;" ><b>Address:</b></label></td><td>
+        <input type="text"  placeholder="Address" style="width:30% ;height: 20px; "formControlName = "address"></td><br>
+     </tr>
+     
+     <tr>    
+       <td><label class="left_right_margin"><b>Company Address :</b></label></td><td>
+       <input type="text"  placeholder="Company Address" style="width:30% ;height: 20px; "formControlName = "companyAddress"></td>
+     </tr>
+     <tr>
+      <td><label class="left_right_margin" ><b>Location :</b></label></td><td>
+        <select style="width:30%;height: 30px; " formControlName="location">
+        <option>Banglore</option>
+        <option>Hyderabad</option>
+        <option>Delhi</option>
+        <option>Kolkatta</option>
+        <option>Mumbai</option>
+        <option>Chennai</option>
+        
+        </select>
+        </td>
+    </tr>
+  
+  
+  
+  
+  
+  
+      </table>
+  
+       <button class="registerbtn" >Register</button>   
+    </form>
+  </div> 
